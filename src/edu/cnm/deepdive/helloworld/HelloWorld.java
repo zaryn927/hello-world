@@ -14,7 +14,14 @@ public class HelloWorld {
    * @param args  command-line parameters (ignored).
    */
   public static void main(String[] args) {
-    emitMessage("Hello World!");
+    String target;
+    if(args.length>0){
+      target = args[0];
+    } else{
+      target = "World";
+    }
+    String message = String.format("Hello %s!", target); 
+    emitMessage(message);
   }
   //method takes string argument and prints it
   private static void emitMessage(String message) {
