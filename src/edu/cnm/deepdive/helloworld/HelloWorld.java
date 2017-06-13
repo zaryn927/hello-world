@@ -25,6 +25,8 @@ public class HelloWorld {
     for(String arg : args){
       System.out.printf("Argument: %s%n", arg);
     }
+    System.getProperties().list(System.out);
+    assert args.length > 10;
   }
 
   // method takes string argument and prints it
